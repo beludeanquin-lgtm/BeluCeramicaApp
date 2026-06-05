@@ -22,7 +22,7 @@ const db = new sqlite3.Database('./belu_ceramica.db', (err) => {
 
 // Crear tablas
 db.serialize(() => {
-  // Tabla de usuarias
+  // Crear tabla de usuarias
   db.run(`CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     email TEXT UNIQUE,
@@ -31,7 +31,20 @@ db.serialize(() => {
     password TEXT,
     role TEXT DEFAULT 'alumna',
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-  )`);
+  )`, (err) => {
+    if (!err) {
+      // Inicializar admins si no existen
+      const adminPassword = bcrypt.hashSync('admin123', 10);
+      db.run(
+        `INSERT OR IGNORE INTO users (email, nombre, apellido, password, role) VALUES (?, ?, ?, ?, ?)`,
+        ['beludeanquin@gmail.com', 'Belu', 'Deanquin', adminPassword, 'admin']
+      );
+      db.run(
+        `INSERT OR IGNORE INTO users (email, nombre, apellido, password, role) VALUES (?, ?, ?, ?, ?)`,
+        ['lucrebayj@gmail.com', 'Lucrecia', 'Bayj', adminPassword, 'admin']
+      );
+    }
+  });
 
   // Tabla de clases
   db.run(`CREATE TABLE IF NOT EXISTS clases (
