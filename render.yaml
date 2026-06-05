@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: belu-ceramica
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: JWT_SECRET
+        value: belu-ceramica-studio-secret-key-2026
+      - key: NODE_ENV
+        value: production
