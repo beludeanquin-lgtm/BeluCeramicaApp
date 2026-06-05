@@ -1,0 +1,119 @@
+═══════════════════════════════════════════════════════════════
+  RAILWAY - PASOS FINALES (3 PASOS SIMPLES)
+═══════════════════════════════════════════════════════════════
+
+✅ TU CÓDIGO YA ESTÁ EN GITHUB
+
+Tu repositorio está en:
+https://github.com/beludeanquin-lgtm/BeluCeramicaApp
+
+Ahora solo falta conectar con Railway (3 pasos)
+
+════════════════════════════════════════════════════════════════
+
+🚀 PASO 1: CREAR CUENTA EN RAILWAY
+
+1. Abre: https://railway.app
+2. Haz clic en "Sign Up" (arriba a la derecha)
+3. Selecciona "Continue with GitHub"
+4. Autoriza Railway a acceder a tu GitHub
+5. ✓ Ya tienes cuenta
+
+════════════════════════════════════════════════════════════════
+
+🔧 PASO 2: CREAR UN NUEVO PROYECTO
+
+1. Una vez en Railway, verás el Dashboard
+2. Haz clic en "New Project" (botón grande azul)
+3. Selecciona "GitHub Repo"
+4. Busca "BeluCeramicaApp"
+5. Haz clic en él
+6. Railway automáticamente empieza a desplegar
+
+════════════════════════════════════════════════════════════════
+
+⏳ PASO 3: ESPERAR A QUE TERMINE (2-3 minutos)
+
+Railway mostrará:
+✓ "Building..." (creando)
+✓ "Deploying..." (desplegando)
+✓ "Running" (¡LISTO!)
+
+Cuando vea "Running" en verde, tu app está LIVE
+
+════════════════════════════════════════════════════════════════
+
+🌐 OBTENER TU LINK PERMANENTE
+
+1. En Railway, verás tu proyecto
+2. Haz clic en "Settings" o "Environment"
+3. Busca "Public URL" o "Domain"
+4. Copia ese link
+
+Tu link será algo como:
+https://beluceramic-production.up.railway.app
+
+(El nombre exacto lo genera Railway automáticamente)
+
+════════════════════════════════════════════════════════════════
+
+🎉 ¡LISTO!
+
+Ya tienes tu app en Internet 24/7
+
+Puedes compartir este link con:
+✓ Lucrecia (administradora)
+✓ Las alumnas
+✓ Quien quieras
+
+════════════════════════════════════════════════════════════════
+
+📱 CÓMO USAN TU APP:
+
+1. Abren el link en el navegador
+2. Ingresan su usuario y contraseña
+3. ¡Listo! Usan la app
+
+ADMIN:
+  Email: beludeanquin@gmail.com o lucrebayj@gmail.com
+  Contraseña: admin123
+
+ALUMNAS:
+  Las que registres desde el panel
+
+════════════════════════════════════════════════════════════════
+
+✅ CHECKLIST:
+
+☑ Código en GitHub ✓
+☐ Crear cuenta Railway
+☐ Conectar BeluCeramicaApp
+☐ Esperar deploy (2-3 min)
+☐ Copiar link
+☐ Compartir con Lucrecia
+
+════════════════════════════════════════════════════════════════
+
+¿PROBLEMAS?
+
+Si Railway dice "Build failed":
+1. Espera 1 minuto y recarga
+2. Si sigue fallando, avísame
+
+Si no ves "Running":
+1. Verifica que el repositorio sea público
+2. Espera un poco más
+3. Recarga la página
+
+════════════════════════════════════════════════════════════════
+
+¡AHORA SÍ A HACERLO! 💜
+
+1. Ve a: https://railway.app
+2. Sign Up con GitHub
+3. New Project → GitHub Repo → BeluCeramicaApp
+4. Espera a que diga "Running"
+5. Copia el link
+6. ¡COMPARTIR!
+
+════════════════════════════════════════════════════════════════
