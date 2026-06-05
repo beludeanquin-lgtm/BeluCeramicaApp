@@ -278,3 +278,14 @@ app.put('/api/alumnas/:id', verificarToken, verificarAdmin, (req, res) => {
 app.listen(PORT, () => {
   console.log(`✅ Servidor ejecutándose en puerto ${PORT}`);
 });
+
+// Keep-alive para Render
+if (process.env.RENDER) {
+  setInterval(() => {
+    const http = require('http');
+    const url = `http://localhost:${PORT}/health`;
+    http.get(url, () => {
+      console.log(`🔄 Keep-alive ping: ${new Date().toISOString()}`);
+    }).on('error', () => {});
+  }, 540000); // Cada 9 minutos
+}
