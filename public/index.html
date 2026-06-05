@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Be·Lu Cerámica Studio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #F5D5D0;
+      --secondary: #E8C5C0;
+      --accent: #D4A5A0;
+      --light-bg: #FFF8F7;
+      --text: #6B5B56;
+      --text-light: #9B8B86;
+      --success: #A8C9A0;
+      --warning: #E8D4A8;
+      --error: #D4A0A0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      padding: 30px 0;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 10px rgba(107, 91, 86, 0.1);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav button {
+      background: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      color: var(--text);
+      transition: all 0.3s;
+    }
+
+    nav button:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    nav button.active {
+      background: var(--accent);
+      color: white;
+    }
+
+    /* CARDS */
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(107, 91, 86, 0.08);
+      transition: all 0.3s;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 16px rgba(107, 91, 86, 0.15);
+    }
+
+    h1, h2, h3 {
+      color: var(--text);
+      margin-bottom: 15px;
+    }
+
+    /* FORMS */
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid var(--primary);
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: inherit;
+      transition: all 0.3s;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(212, 165, 160, 0.1);
+    }
+
+    /* BUTTONS */
+    .btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.3s;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #C4957A;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: var(--primary);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      background: var(--secondary);
+    }
+
+    .btn-danger {
+      background: var(--error);
+      color: white;
+    }
+
+    .btn-success {
+      background: var(--success);
+      color: white;
+    }
+
+    .btn-full {
+      width: 100%;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* CLASES */
+    .clase-card {
+      border-left: 4px solid var(--accent);
+    }
+
+    .clase-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .horario-badge {
+      background: var(--primary);
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .capacidad {
+      font-size: 12px;
+      color: var(--text-light);
+    }
+
+    /* AUTH */
+    .auth-container {
+      max-width: 400px;
+      margin: 60px auto;
+    }
+
+    .auth-card {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(107, 91, 86, 0.1);
+    }
+
+    .auth-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 10px;
+      background: var(--primary);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      color: var(--text);
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .tab-btn.active {
+      background: var(--accent);
+      color: white;
+    }
+
+    /* ADMIN */
+    .admin-panel {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .admin-stat {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .admin-stat-value {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .admin-stat-label {
+      font-size: 12px;
+      color: var(--text-light);
+      text-transform: uppercase;
+      margin-top: 5px;
+    }
+
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th {
+      background: var(--primary);
+      padding: 12px;
+      text-align: left;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    td {
+      padding: 12px;
+      border-bottom: 1px solid var(--primary);
+    }
+
+    tr:hover {
+      background: var(--light-bg);
+    }
+
+    /* ALERTS */
+    .alert {
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .alert-success {
+      background: rgba(168, 201, 160, 0.1);
+      color: #5a8c52;
+      border-left: 4px solid var(--success);
+    }
+
+    .alert-error {
+      background: rgba(212, 160, 160, 0.1);
+      color: #c4524a;
+      border-left: 4px solid var(--error);
+    }
+
+    .alert-warning {
+      background: rgba(232, 212, 168, 0.1);
+      color: #b89752;
+      border-left: 4px solid var(--warning);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        width: 100%;
+      }
+
+      nav button {
+        flex: 1;
+      }
+
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 40px;
+      color: var(--text-light);
+    }
+
+    .spinner {
+      border: 3px solid var(--primary);
+      border-top: 3px solid var(--accent);
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      animation: spin 1s linear infinite;
+      margin: 20px auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const API_URL = 'http://localhost:5000/api';
+
+    // COMPONENTE PRINCIPAL
+    function App() {
+      const [view, setView] = React.useState('login');
+      const [user, setUser] = React.useState(null);
+      const [loading, setLoading] = React.useState(false);
+      const [message, setMessage] = React.useState('');
+
+      React.useEffect(() => {
+        const token = localStorage.getItem('token');
+        const userData = localStorage.getItem('user');
+        if (token && userData) {
+          setUser(JSON.parse(userData));
+          setView(JSON.parse(userData).role === 'admin' ? 'admin' : 'dashboard');
+        }
+      }, []);
+
+      const handleLogout = () => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        setUser(null);
+        setView('login');
+      };
+
+      if (!user) {
+        return <Auth setUser={setUser} setView={setView} />;
+      }
+
+      return (
+        <>
+          <header>
+            <div className="container">
+              <div className="header-content">
+                <div className="logo">Be<span>·</span>Lu <span>Cerámica</span></div>
+                <nav>
+                  {user.role === 'admin' ? (
+                    <>
+                      <button
+                        className={view === 'admin' ? 'active' : ''}
+                        onClick={() => setView('admin')}
+                      >
+                        📊 Admin
+                      </button>
+                      <button
+                        className={view === 'clases' ? 'active' : ''}
+                        onClick={() => setView('clases')}
+                      >
+                        📅 Clases
+                      </button>
+                      <button
+                        className={view === 'alumnas' ? 'active' : ''}
+                        onClick={() => setView('alumnas')}
+                      >
+                        👥 Alumnas
+                      </button>
+                      <button
+                        className={view === 'piezas' ? 'active' : ''}
+                        onClick={() => setView('piezas')}
+                      >
+                        🎨 Piezas
+                      </button>
+                    </>
+                  ) : (
+                    <>
+                      <button
+                        className={view === 'dashboard' ? 'active' : ''}
+                        onClick={() => setView('dashboard')}
+                      >
+                        🏠 Inicio
+                      </button>
+                      <button
+                        className={view === 'clases-alumna' ? 'active' : ''}
+                        onClick={() => setView('clases-alumna')}
+                      >
+                        📅 Clases
+                      </button>
+                      <button
+                        className={view === 'pagos' ? 'active' : ''}
+                        onClick={() => setView('pagos')}
+                      >
+                        💰 Pagos
+                      </button>
+                    </>
+                  )}
+                  <button onClick={handleLogout}>🚪 Salir</button>
+                </nav>
+              </div>
+            </div>
+          </header>
+
+          <main className="container">
+            {message && (
+              <div className={`alert ${message.type === 'success' ? 'alert-success' : 'alert-error'}`}>
+                {message.text}
+              </div>
+            )}
+
+            {user.role === 'admin' && (
+              <>
+                {view === 'admin' && <AdminDashboard user={user} />}
+                {view === 'clases' && <AdminClases setMessage={setMessage} />}
+                {view === 'alumnas' && <AdminAlumnas setMessage={setMessage} />}
+                {view === 'piezas' && <AdminPiezas setMessage={setMessage} />}
+              </>
+            )}
+
+            {user.role === 'alumna' && (
+              <>
+                {view === 'dashboard' && <DashboardAlumna user={user} />}
+                {view === 'clases-alumna' && <ClasesAlumna user={user} setMessage={setMessage} />}
+                {view === 'pagos' && <PagosAlumna user={user} />}
+              </>
+            )}
+          </main>
+        </>
+      );
+    }
+
+    // COMPONENTE LOGIN/REGISTRO
+    function Auth({ setUser, setView }) {
+      const [formData, setFormData] = React.useState({
+        email: '',
+        password: ''
+      });
+      const [loading, setLoading] = React.useState(false);
+      const [error, setError] = React.useState('');
+
+      const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+      };
+
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setError('');
+
+        try {
+          const response = await fetch(`${API_URL}/auth/login`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+          });
+
+          const data = await response.json();
+
+          if (!response.ok) throw new Error(data.error);
+
+          localStorage.setItem('token', data.token);
+          localStorage.setItem('user', JSON.stringify(data.user));
+          setUser(data.user);
+          setView(data.user.role === 'admin' ? 'admin' : 'dashboard');
+        } catch (err) {
+          setError(err.message);
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      return (
+        <div className="auth-container">
+          <div className="auth-card">
+            <h1 style={{ textAlign: 'center', marginBottom: 10 }}>Be·Lu Cerámica</h1>
+            <p style={{ textAlign: 'center', marginBottom: 30, color: '#9B8B86', fontSize: 14 }}>
+              Sistema de Gestión
+            </p>
+
+            {error && <div className="alert alert-error">{error}</div>}
+
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label>Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="tu@email.com"
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Contraseña</label>
+                <input
+                  type="password"
+                  name="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  placeholder="tu contraseña"
+                  required
+                />
+              </div>
+
+              <button type="submit" className="btn btn-primary btn-full" disabled={loading}>
+                {loading ? 'Ingresando...' : 'Ingresar'}
+              </button>
+            </form>
+
+            <div style={{ marginTop: 30, padding: 15, background: '#F5D5D0', borderRadius: 8, fontSize: 12, color: '#6B5B56' }}>
+              <p style={{ margin: 0, marginBottom: 10 }}>
+                <strong>📌 Solo para Administradoras:</strong>
+              </p>
+              <p style={{ margin: 0, marginBottom: 5 }}>
+                Belu: beludeanquin@gmail.com / admin123
+              </p>
+              <p style={{ margin: 0 }}>
+                Lucrecia: lucrebayj@gmail.com / admin123
+              </p>
+            </div>
+
+            <div style={{ marginTop: 15, padding: 15, background: '#FFF8F7', borderRadius: 8, fontSize: 12, color: '#9B8B86', borderLeft: '4px solid #D4A5A0' }}>
+              <p style={{ margin: 0 }}>
+                Las alumnas serán registradas por las administradoras desde el panel de gestión.
+              </p>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // DASHBOARD ALUMNA
+    function DashboardAlumna({ user }) {
+      return (
+        <div>
+          <h1>¡Bienvenida {user.nombre}! 💜</h1>
+
+          <div className="card" style={{ background: 'linear-gradient(135deg, #F5D5D0 0%, #E8C5C0 100%)', marginBottom: 30, textAlign: 'center', padding: '30px' }}>
+            <h2 style={{ color: '#6B5B56', marginBottom: 15, fontSize: 22, fontStyle: 'italic' }}>
+              "La cerámica nos enseña que todas nuestras imperfecciones son parte de nuestra belleza única"
+            </h2>
+            <p style={{ color: '#A79B96', fontSize: 14 }}>
+              Cada clase es una oportunidad para crear, aprender y conectar con tu arte interior ✨
+            </p>
+          </div>
+
+          <div className="grid">
+            <div className="card">
+              <h3>💰 Precios y Seña</h3>
+              <ul style={{ lineHeight: '2.2', fontSize: 13, marginBottom: 20 }}>
+                <li>Taller Regular: <strong>$70.000</strong>/mes</li>
+                <li>Clase Suelta: <strong>$27.000</strong></li>
+                <li>Seña Garantía: <strong>$10.000</strong>/mes*</li>
+              </ul>
+              <div style={{ background: '#FFF8F7', padding: 15, borderRadius: 8, marginBottom: 15 }}>
+                <p style={{ fontSize: 12, color: '#6B5B56', marginBottom: 8 }}>
+                  <strong>Paga tu seña aquí:</strong>
+                </p>
+                <p style={{ fontSize: 14, fontWeight: 'bold', color: '#D4A5A0', fontFamily: 'monospace', marginBottom: 10 }}>
+                  belen.deanquin
+                </p>
+                <p style={{ fontSize: 11, color: '#9B8B86', margin: 0 }}>
+                  *Se paga una vez al mes para garantizar tu lugar
+                </p>
+              </div>
+              <p style={{ fontSize: 12, color: '#9B8B86', background: '#F5D5D0', padding: 10, borderRadius: 6, margin: 0 }}>
+                ✓ Incluye acceso a 3 clases regulares del mes
+              </p>
+            </div>
+
+            <div className="card">
+              <h3>📋 Reglas de la Casa</h3>
+              <ul style={{ lineHeight: '2.2', fontSize: 13 }}>
+                <li>✓ Cancelación: <strong>24 horas antes</strong></li>
+                <li>📅 Se recupera en el <strong>mismo mes</strong></li>
+                <li>✗ Sin cancelación = <strong>clase perdida</strong></li>
+                <li>💰 Pagos: hasta <strong>el 10</strong> de cada mes</li>
+                <li>⚠️ Después del 10: <strong>+10% recargo</strong></li>
+              </ul>
+            </div>
+
+            <div className="card">
+              <h3>⏰ Horarios</h3>
+              <ul style={{ lineHeight: '2.2', fontSize: 13 }}>
+                <li>🗓️ Jueves: <strong>18:00 - 20:00</strong></li>
+                <li>🗓️ Viernes: <strong>10:00 - 12:00</strong></li>
+                <li>🗓️ Viernes: <strong>18:00 - 20:00</strong></li>
+              </ul>
+            </div>
+
+            <div className="card">
+              <h3>📱 Síguenos</h3>
+              <p>Instagram: <strong>@ceramicaestudio.belu</strong></p>
+              <p style={{ marginTop: 15, fontSize: 12, color: '#9B8B86' }}>
+                Entérate de workshops, nuevas piezas y promociones
+              </p>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // CLASES ALUMNA
+    function ClasesAlumna({ user, setMessage }) {
+      const [clases, setClases] = React.useState([]);
+      const [misClases, setMisClases] = React.useState([]);
+      const [loading, setLoading] = React.useState(true);
+
+      React.useEffect(() => {
+        cargarClases();
+        cargarMisClases();
+      }, []);
+
+      const cargarClases = async () => {
+        try {
+          const token = localStorage.getItem('token');
+          const res = await fetch(`${API_URL}/clases`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+          });
+          const data = await res.json();
+          setClases(data);
+          setLoading(false);
+        } catch (err) {
+          console.error(err);
+        }
+      };
+
+      const cargarMisClases = async () => {
+        try {
+          const token = localStorage.getItem('token');
+          const res = await fetch(`${API_URL}/mis-clases`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+          });
+          const data = await res.json();
+          setMisClases(data);
+        } catch (err) {
+          console.error(err);
+        }
+      };
+
+      const inscribirse = async (claseId) => {
+        try {
+          const token = localStorage.getItem('token');
+          const res = await fetch(`${API_URL}/inscripciones`, {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${token}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ clase_id: claseId })
+          });
+
+          if (res.ok) {
+            setMessage({ type: 'success', text: '✓ ¡Inscripta con éxito!' });
+            cargarClases();
+            cargarMisClases();
+          }
+        } catch (err) {
+          setMessage({ type: 'error', text: 'Error al inscribirse' });
+        }
+      };
+
+      const cancelarClase = async (claseId) => {
+        if (confirm('¿Deseas cancelar esta clase? (Puedes recuperarla en el mismo mes)')) {
+          try {
+            const token = localStorage.getItem('token');
+            const res = await fetch(`${API_URL}/inscripciones/${claseId}`, {
+              method: 'DELETE',
+              headers: { 'Authorization': `Bearer ${token}` }
+            });
+
+            if (res.ok) {
+              setMessage({ type: 'success', text: '✓ Clase cancelada. Puedes recuperarla este mes.' });
+              cargarClases();
+              cargarMisClases();
+            }
+          } catch (err) {
+            setMessage({ type: 'error', text: 'Error al cancelar' });
+          }
+        }
+      };
+
+      if (loading) return <div className="loading"><div className="spinner"></div></div>;
+
+      const misClaseIds = misClases.map(c => c.id);
+      const alcanzoLimite = misClases.length >= 3;
+
+      return (
+        <div>
+          <h1>📅 Mis Clases</h1>
+
+          {alcanzoLimite && (
+            <div className="alert alert-warning" style={{ marginBottom: 20 }}>
+              ⚠️ Ya tienes 3 clases inscriptas (el máximo del mes). Para inscribirte a otra, debes cancelar una.
+            </div>
+          )}
+
+          {misClases.length > 0 && (
+            <div className="card" style={{ background: '#FFF8F7', borderLeft: '4px solid #A8C9A0', marginBottom: 30 }}>
+              <h2 style={{ color: '#6B5B56', marginBottom: 15 }}>Mis Inscripciones ({misClases.length}/3)</h2>
+              <div className="grid">
+                {misClases.map(clase => (
+                  <div key={clase.id} className="card" style={{ borderLeft: '4px solid #A8C9A0' }}>
+                    <div className="clase-header">
+                      <div>
+                        <h3>{clase.dia}</h3>
+                        <div className="horario-badge" style={{ background: '#A8C9A0', color: 'white' }}>
+                          {clase.horario}
+                        </div>
+                      </div>
+                    </div>
+                    <p>📅 <strong>{clase.fecha}</strong></p>
+                    <p style={{ fontSize: 12, color: '#9B8B86', marginBottom: 15 }}>
+                      Estás inscripta en esta clase
+                    </p>
+                    <button
+                      className="btn btn-danger"
+                      onClick={() => cancelarClase(clase.id)}
+                      style={{ width: '100%' }}
+                    >
+                      ✕ Cancelar Inscripción
+                    </button>
+                  </div>
+                ))}
+              </div>
+              <p style={{ fontSize: 12, color: '#9B8B86', marginTop: 15, fontStyle: 'italic' }}>
+                💡 Puedes cancelar hasta 24 horas antes. Si cancelas a tiempo, recuperas el lugar en otra clase del mes.
+              </p>
+            </div>
+          )}
+
+          <h2 style={{ marginTop: 30, marginBottom: 15 }}>Clases Disponibles</h2>
+          <div className="grid">
+            {clases.map(clase => (
+              <div key={clase.id} className="card clase-card">
+                <div className="clase-header">
+                  <div>
+                    <h3>{clase.dia}</h3>
+                    <div className="horario-badge">{clase.horario}</div>
+                  </div>
+                  <div className="capacidad">{clase.asistentes}/{clase.capacidad} lugares</div>
+                </div>
+                <p>📅 Fecha: <strong>{clase.fecha}</strong></p>
+                <button
+                  className="btn btn-primary btn-full"
+                  onClick={() => inscribirse(clase.id)}
+                  disabled={misClaseIds.includes(clase.id) || alcanzoLimite}
+                  style={{
+                    opacity: (misClaseIds.includes(clase.id) || alcanzoLimite) ? 0.5 : 1,
+                    cursor: (misClaseIds.includes(clase.id) || alcanzoLimite) ? 'default' : 'pointer',
+                    background: alcanzoLimite && !misClaseIds.includes(clase.id) ? '#D4A0A0' : ''
+                  }}
+                  title={alcanzoLimite && !misClaseIds.includes(clase.id) ? 'Ya tienes 3 clases. Cancela una para inscribirte a otra.' : ''}
+                >
+                  {misClaseIds.includes(clase.id) ? '✓ Inscripta' : alcanzoLimite ? '⊘ Límite alcanzado' : '+ Inscribirse'}
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    // PAGOS ALUMNA
+    function PagosAlumna({ user }) {
+      const [pagos, setPagos] = React.useState([]);
+
+      React.useEffect(() => {
+        cargarPagos();
+      }, [user.id]);
+
+      const cargarPagos = async () => {
+        try {
+          const token = localStorage.getItem('token');
+          const res = await fetch(`${API_URL}/pagos/${user.id}`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+          });
+          const data = await res.json();
+          setPagos(data);
+        } catch (err) {
+          console.error(err);
+        }
+      };
+
+      return (
+        <div>
+          <h1>Mis Pagos</h1>
+          <div className="card">
+            <table>
+              <thead>
+                <tr>
+                  <th>Concepto</th>
+                  <th>Monto</th>
+                  <th>Estado</th>
+                  <th>Vencimiento</th>
+                </tr>
+              </thead>
+              <tbody>
+                {pagos.map(pago => (
+                  <tr key={pago.id}>
+                    <td>{pago.tipo}</td>
+                    <td>${pago.monto}</td>
+                    <td>{pago.estado}</td>
+                    <td>{new Date(pago.fecha_vencimiento).toLocaleDateString()}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      );
+    }
+
+    // ADMIN DASHBOARD
+    function AdminDashboard({ user }) {
+      return (
+        <div>
+          <h1>Panel Administrativo</h1>
+          <div className="admin-panel">
+            <div className="admin-stat">
+              <div className="admin-stat-value">0</div>
+              <div className="admin-stat-label">Alumnas Registradas</div>
+            </div>
+            <div className="admin-stat">
+              <div className="admin-stat-value">0</div>
+              <div className="admin-stat-label">Clases Este Mes</div>
+            </div>
+            <div className="admin-stat">
+              <div className="admin-stat-value">0</div>
+              <div className="admin-stat-label">Pagos Pendientes</div>
+            </div>
+            <div className="admin-stat">
+              <div className="admin-stat-value">0</div>
+              <div className="admin-stat-label">Workshops Activos</div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // ADMIN CLASES
+    function AdminClases({ setMessage }) {
+      const [clases, setClases] = React.useState([]);
+      const [formData, setFormData] = React.useState({
+        fecha: '',
+        dia: '',
+        horario: '',
+        turno: ''
+      });
+
+      const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+      };
+
+      const agregarClase = async (e) => {
+        e.preventDefault();
+        try {
+          const token = localStorage.getItem('token');
+          const res = await fetch(`${API_URL}/clases`, {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${token}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          });
+
+          if (res.ok) {
+            setMessage({ type: 'success', text: 'Clase agregada correctamente' });
+            setFormData({ fecha: '', dia: '', horario: '', turno: '' });
+            cargarClases();
+          }
+        } catch (err) {
+          setMessage({ type: 'error', text: 'Error al agregar clase' });
+        }
+      };
+
+      const cargarClases = async () => {
+        try {
+          const token = localStorage.getItem('token');
+          const res = await fetch(`${API_URL}/clases`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+          });
+          const data = await res.json();
+          setClases(data);
+        } catch (err) {
+          console.error(err);
+        }
+      };
+
+      React.useEffect(() => {
+        cargarClases();
+      }, []);
+
+      return (
+        <div>
+          <h1>Gestión de Clases</h1>
+
+          <div className="card">
+            <h2>Agregar Nueva Clase</h2>
+            <form onSubmit={agregarClase}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 15 }}>
+                <div className="form-group">
+                  <label>Fecha</label>
+                  <input
+                    type="date"
+                    name="fecha"
+                    value={formData.fecha}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Día</label>
+                  <select name="dia" value={formData.dia} onChange={handleChange} required>
+                    <option value="">Seleccionar</option>
+                    <option value="Jueves">Jueves</option>
+                    <option value="Viernes">Viernes</option>
+                  </select>
+                </div>
+                <div className="form-group">
+                  <label>Horario</label>
+                  <select name="horario" value={formData.horario} onChange={handleChange} required>
+                    <option value="">Seleccionar</option>
+                    <option value="18:00 - 20:00">18:00 - 20:00</option>
+                    <option value="10:00 - 12:00">10:00 - 12:00</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" className="btn btn-primary">Agregar Clase</button>
+            </form>
+          </div>
+
+          <div className="card">
+            <h2>Clases Programadas</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Día</th>
+                  <th>Horario</th>
+                  <th>Inscritas</th>
+                </tr>
+              </thead>
+              <tbody>
+                {clases.map(clase => (
+                  <tr key={clase.id}>
+                    <td>{clase.fecha}</td>
+                    <td>{clase.dia}</td>
+                    <td>{clase.horario}</td>
+                    <td>{clase.asistentes}/{clase.capacidad}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      );
+    }
+
+    // ADMIN ALUMNAS
+    function AdminAlumnas({ setMessage }) {
+      const [alumnas, setAlumnas] = React.useState([]);
+      const [mostrarFormulario, setMostrarFormulario] = React.useState(false);
+      const [editando, setEditando] = React.useState(null);
+      const [formData, setFormData] = React.useState({
+        nombre: '',
+        apellido: '',
+        email: '',
+        password: ''
+      });
+
+      React.useEffect(() => {
+        cargarAlumnas();
+      }, []);
+
+      const cargarAlumnas = async () => {
+        try {
+          const token = localStorage.getItem('token');
+          const res = await fetch(`${API_URL}/alumnas`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+          });
+          const data = await res.json();
+          setAlumnas(data);
+        } catch (err) {
+          setMessage({ type: 'error', text: 'Error al cargar alumnas' });
+        }
+      };
+
+      const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+      };
+
+      const registrarAlumna = async (e) => {
+        e.preventDefault();
+        try {
+          const token = localStorage.getItem('token');
+          const res = await fetch(`${API_URL}/auth/registrar-alumna`, {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${token}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          });
+
+          if (res.ok) {
+            setMessage({ type: 'success', text: '✓ Alumna registrada correctamente' });
+            setFormData({ nombre: '', apellido: '', email: '', password: '' });
+            setMostrarFormulario(false);
+            cargarAlumnas();
+          } else {
+            const error = await res.json();
+            setMessage({ type: 'error', text: error.error });
+          }
+        } catch (err) {
+          setMessage({ type: 'error', text: 'Error al registrar' });
+        }
+      };
+
+      const darDeBaja = async (id) => {
+        if (confirm('¿Estás segura de que deseas dar de baja a esta alumna? Se eliminarán todas sus inscripciones y pagos.')) {
+          try {
+            const token = localStorage.getItem('token');
+            const res = await fetch(`${API_URL}/alumnas/${id}`, {
+              method: 'DELETE',
+              headers: { 'Authorization': `Bearer ${token}` }
+            });
+
+            if (res.ok) {
+              setMessage({ type: 'success', text: '✓ Alumna dada de baja' });
+              cargarAlumnas();
+            }
+          } catch (err) {
+            setMessage({ type: 'error', text: 'Error al dar de baja' });
+          }
+        }
+      };
+
+      return (
+        <div>
+          <h1>Gestión de Alumnas</h1>
+
+          <div className="card">
+            <button
+              className="btn btn-primary"
+              onClick={() => { setMostrarFormulario(!mostrarFormulario); setEditando(null); }}
+            >
+              {mostrarFormulario ? '✕ Cancelar' : '+ Registrar Nueva Alumna'}
+            </button>
+          </div>
+
+          {mostrarFormulario && (
+            <div className="card">
+              <h2>Registrar Nueva Alumna</h2>
+              <form onSubmit={registrarAlumna} style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 15 }}>
+                <div className="form-group">
+                  <label>Nombre</label>
+                  <input
+                    type="text"
+                    name="nombre"
+                    value={formData.nombre}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Apellido</label>
+                  <input
+                    type="text"
+                    name="apellido"
+                    value={formData.apellido}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Contraseña Inicial</label>
+                  <input
+                    type="password"
+                    name="password"
+                    value={formData.password}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+              </form>
+              <button type="submit" className="btn btn-success" onClick={registrarAlumna} style={{ marginTop: 15 }}>
+                Registrar Alumna
+              </button>
+            </div>
+          )}
+
+          <div className="card">
+            <h2>Alumnas Registradas ({alumnas.length})</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Email</th>
+                  <th>Registrada</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                {alumnas.map(alumna => (
+                  <tr key={alumna.id}>
+                    <td>{alumna.nombre}</td>
+                    <td>{alumna.apellido}</td>
+                    <td>{alumna.email}</td>
+                    <td>{new Date(alumna.created_at).toLocaleDateString()}</td>
+                    <td>
+                      <button
+                        className="btn btn-danger"
+                        onClick={() => darDeBaja(alumna.id)}
+                        style={{ padding: '6px 12px', fontSize: 12 }}
+                      >
+                        Dar de Baja
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            {alumnas.length === 0 && (
+              <p style={{ marginTop: 15, textAlign: 'center', color: '#9B8B86' }}>
+                No hay alumnas registradas aún
+              </p>
+            )}
+          </div>
+        </div>
+      );
+    }
+
+    // ADMIN PIEZAS
+    function AdminPiezas({ setMessage }) {
+      const [piezasBizcocho, setPiezasBizcocho] = React.useState([]);
+      const [piezasContramolde, setPiezasContramolde] = React.useState([]);
+      const [loading, setLoading] = React.useState(true);
+      const [formBizcocho, setFormBizcocho] = React.useState({
+        modelo: '',
+        descripcion: '',
+        valor: '',
+        cantidad_disponible: ''
+      });
+      const [formContramolde, setFormContramolde] = React.useState({
+        modelo: '',
+        valor: ''
+      });
+
+      React.useEffect(() => {
+        cargarPiezas();
+      }, []);
+
+      const cargarPiezas = async () => {
+        try {
+          const token = localStorage.getItem('token');
+          const res1 = await fetch(`${API_URL}/piezas-bizcocho`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+          });
+          const res2 = await fetch(`${API_URL}/piezas-contramolde`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+          });
+          const data1 = await res1.json();
+          const data2 = await res2.json();
+          setPiezasBizcocho(data1);
+          setPiezasContramolde(data2);
+          setLoading(false);
+        } catch (err) {
+          console.error(err);
+        }
+      };
+
+      const agregarPiezaBizcocho = async (e) => {
+        e.preventDefault();
+        try {
+          const token = localStorage.getItem('token');
+          const res = await fetch(`${API_URL}/piezas-bizcocho`, {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${token}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formBizcocho)
+          });
+
+          if (res.ok) {
+            setMessage({ type: 'success', text: '✓ Pieza bizcocho agregada' });
+            setFormBizcocho({ modelo: '', descripcion: '', valor: '', cantidad_disponible: '' });
+            cargarPiezas();
+          }
+        } catch (err) {
+          setMessage({ type: 'error', text: 'Error al agregar pieza' });
+        }
+      };
+
+      const agregarPiezaContramolde = async (e) => {
+        e.preventDefault();
+        try {
+          const token = localStorage.getItem('token');
+          const res = await fetch(`${API_URL}/piezas-contramolde`, {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${token}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formContramolde)
+          });
+
+          if (res.ok) {
+            setMessage({ type: 'success', text: '✓ Pieza contramolde agregada' });
+            setFormContramolde({ modelo: '', valor: '' });
+            cargarPiezas();
+          }
+        } catch (err) {
+          setMessage({ type: 'error', text: 'Error al agregar pieza' });
+        }
+      };
+
+      if (loading) return <div className="loading"><div className="spinner"></div></div>;
+
+      return (
+        <div>
+          <h1>Gestión de Piezas</h1>
+
+          <div className="grid">
+            <div className="card">
+              <h2>🎨 Piezas Bizcocho</h2>
+              <h3>Agregar Nueva</h3>
+              <form onSubmit={agregarPiezaBizcocho}>
+                <div className="form-group">
+                  <label>Modelo</label>
+                  <input
+                    type="text"
+                    placeholder="Ej: Taza Base"
+                    value={formBizcocho.modelo}
+                    onChange={(e) => setFormBizcocho({...formBizcocho, modelo: e.target.value})}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Descripción</label>
+                  <input
+                    type="text"
+                    placeholder="Ej: Taza clásica de cerámica"
+                    value={formBizcocho.descripcion}
+                    onChange={(e) => setFormBizcocho({...formBizcocho, descripcion: e.target.value})}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Valor ($)</label>
+                  <input
+                    type="number"
+                    placeholder="5000"
+                    value={formBizcocho.valor}
+                    onChange={(e) => setFormBizcocho({...formBizcocho, valor: e.target.value})}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Cantidad Disponible</label>
+                  <input
+                    type="number"
+                    placeholder="10"
+                    value={formBizcocho.cantidad_disponible}
+                    onChange={(e) => setFormBizcocho({...formBizcocho, cantidad_disponible: e.target.value})}
+                    required
+                  />
+                </div>
+                <button type="submit" className="btn btn-primary btn-full">Agregar Pieza</button>
+              </form>
+            </div>
+
+            <div className="card">
+              <h2>🏺 Piezas Contramolde</h2>
+              <h3>Agregar Nueva</h3>
+              <form onSubmit={agregarPiezaContramolde}>
+                <div className="form-group">
+                  <label>Modelo</label>
+                  <input
+                    type="text"
+                    placeholder="Ej: Forma de Hoja"
+                    value={formContramolde.modelo}
+                    onChange={(e) => setFormContramolde({...formContramolde, modelo: e.target.value})}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Valor ($)</label>
+                  <input
+                    type="number"
+                    placeholder="12000"
+                    value={formContramolde.valor}
+                    onChange={(e) => setFormContramolde({...formContramolde, valor: e.target.value})}
+                    required
+                  />
+                </div>
+                <button type="submit" className="btn btn-primary btn-full">Agregar Pieza</button>
+              </form>
+            </div>
+          </div>
+
+          <div className="card">
+            <h2>📦 Catálogo de Piezas Bizcocho</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Modelo</th>
+                  <th>Descripción</th>
+                  <th>Valor</th>
+                  <th>Disponibles</th>
+                </tr>
+              </thead>
+              <tbody>
+                {piezasBizcocho.map(pieza => (
+                  <tr key={pieza.id}>
+                    <td>{pieza.modelo}</td>
+                    <td>{pieza.descripcion}</td>
+                    <td>${pieza.valor}</td>
+                    <td>{pieza.cantidad_disponible}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="card">
+            <h2>🏺 Catálogo de Piezas Contramolde</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Modelo</th>
+                  <th>Valor</th>
+                </tr>
+              </thead>
+              <tbody>
+                {piezasContramolde.map(pieza => (
+                  <tr key={pieza.id}>
+                    <td>{pieza.modelo}</td>
+                    <td>${pieza.valor}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      );
+    }
+
+    // RENDER
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

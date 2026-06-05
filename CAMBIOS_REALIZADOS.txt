@@ -1,0 +1,178 @@
+═══════════════════════════════════════════════════════════════
+  BE·LU CERÁMICA STUDIO - CAMBIOS REALIZADOS
+═══════════════════════════════════════════════════════════════
+
+📝 RESUMEN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Se actualizó la app para que:
+✓ SOLO las administradoras pueden ingresar al sistema
+✓ Las administradoras registran a las alumnas (no se auto-registran)
+✓ Las administradoras pueden dar de baja alumnas
+✓ Panel completo de gestión de alumnas
+✓ Panel completo de gestión de piezas
+
+═══════════════════════════════════════════════════════════════
+
+🔐 CAMBIOS EN AUTENTICACIÓN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ANTES:
+  • Alumnas podían registrarse solas
+  • Había tab de "Registrarse" en login
+  • Registro libre sin control
+
+AHORA:
+  ✓ Solo login (sin botón de registro)
+  ✓ Mensaje claro: "Administradoras solo"
+  ✓ Credenciales mostradas en la pantalla de login
+  ✓ Las alumnas son registradas por admin
+
+═══════════════════════════════════════════════════════════════
+
+👥 NUEVO PANEL: GESTIÓN DE ALUMNAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FUNCIONES:
+
+1️⃣ REGISTRAR NUEVA ALUMNA
+   • Haz clic en "+ Registrar Nueva Alumna"
+   • Completa: Nombre, Apellido, Email, Contraseña
+   • La alumna ya puede ingresar con esas credenciales
+   • Se muestra confirmación verde
+
+2️⃣ VER LISTADO DE ALUMNAS
+   • Tabla con todas las alumnas registradas
+   • Muestra: Nombre, Apellido, Email, Fecha de registro
+   • Se actualiza automáticamente
+
+3️⃣ DAR DE BAJA ALUMNA
+   • Clic en botón "Dar de Baja" en cada fila
+   • Pide confirmación
+   • Se elimina la alumna y todas sus inscripciones
+   • Se eliminan sus pagos registrados
+
+═══════════════════════════════════════════════════════════════
+
+🎨 NUEVO PANEL: GESTIÓN DE PIEZAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FUNCIONES:
+
+1️⃣ AGREGAR PIEZA BIZCOCHO
+   • Modelo: nombre de la pieza
+   • Descripción: detalles
+   • Valor: precio en pesos
+   • Cantidad: cuántas hay disponibles
+   • Se muestra en catálogo automáticamente
+
+2️⃣ AGREGAR PIEZA CONTRAMOLDE
+   • Modelo: nombre del molde
+   • Valor: precio en pesos
+   • Más simple que bizcocho (sin descripción ni cantidad)
+
+3️⃣ VER CATÁLOGOS
+   • Tabla de piezas bizcocho con todos los datos
+   • Tabla de piezas contramolde
+   • Se actualizan en tiempo real
+
+═══════════════════════════════════════════════════════════════
+
+🔧 CAMBIOS TÉCNICOS (Backend)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+server.js - Nuevos endpoints:
+
+POST /api/auth/registrar-alumna
+  → Solo admin puede registrar alumnas
+  → Requiere: email, nombre, apellido, password
+  → Devuelve: id de alumna creada
+
+GET /api/alumnas
+  → Lista todas las alumnas registradas
+  → Solo admin puede ver
+  → Devuelve: nombre, apellido, email, fecha registro
+
+DELETE /api/alumnas/:id
+  → Elimina una alumna (dar de baja)
+  → Elimina inscripciones y pagos asociados
+  → Solo admin puede hacer esto
+
+PUT /api/alumnas/:id
+  → Actualiza datos de alumna (listo para futuro)
+  → Nombre, apellido, email
+  → Solo admin
+
+═══════════════════════════════════════════════════════════════
+
+🎨 CAMBIOS TÉCNICOS (Frontend)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+public/index.html - Componentes actualizados:
+
+✓ Auth (función)
+  • Eliminó tab de registro
+  • Solo login
+  • Muestra credenciales
+  • Mensaje informativo
+
+✓ AdminAlumnas (función)
+  • Formulario para registrar alumnas
+  • Tabla de alumnas registradas
+  • Botón para dar de baja
+  • Contador de alumnas
+
+✓ AdminPiezas (función)
+  • Formulario para agregar piezas bizcocho
+  • Formulario para agregar piezas contramolde
+  • Tablas de catálogos
+  • Interfaz de dos columnas (responsive)
+
+═══════════════════════════════════════════════════════════════
+
+📊 FLUJO DE USO AHORA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Belu o Lucrecia ingresa con su email y contraseña
+2. Ven el dashboard con opciones: Admin, Clases, Alumnas, Piezas
+3. Van a "Alumnas"
+4. Hacen clic en "+ Registrar Nueva Alumna"
+5. Completan el formulario con datos de la alumna
+6. La alumna recibe sus credenciales
+7. Alumna ingresa a la app y ve sus clases disponibles
+
+Para dar de baja:
+1. Admin va a "Alumnas"
+2. Busca la alumna en la tabla
+3. Haz clic en "Dar de Baja"
+4. Confirma
+5. Alumna se elimina (se pierden inscripciones y pagos)
+
+═══════════════════════════════════════════════════════════════
+
+✅ PROBADO Y FUNCIONANDO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Login de admin funciona
+✓ Endpoints de alumnas funcionan
+✓ Endpoints de piezas funcionan
+✓ Interfaz responsive
+✓ Mensajes de confirmación
+✓ Base de datos guarda datos correctamente
+
+═══════════════════════════════════════════════════════════════
+
+🚀 CÓMO PROBAR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Inicia la app: npm start
+2. Ve a http://localhost:5000
+3. Ingresa: beludeanquin@gmail.com / admin123
+4. Haz clic en "👥 Alumnas"
+5. Registra una alumna de prueba
+6. Ve el listado actualizado
+7. Prueba la opción "Dar de Baja"
+
+═══════════════════════════════════════════════════════════════
+
+Hecho con 💜 para Be·Lu Cerámica Studio

@@ -1,0 +1,132 @@
+═══════════════════════════════════════════════════════════════
+  ÚLTIMOS CAMBIOS - Be·Lu Cerámica Studio
+═══════════════════════════════════════════════════════════════
+
+✅ CAMBIOS REALIZADOS (5 de Junio 2026)
+
+════════════════════════════════════════════════════════════════
+
+🎨 DASHBOARD DE ALUMNAS - MEJORADO
+
+✓ Frase motivacional
+  "La cerámica nos enseña que todas nuestras imperfecciones
+   son parte de nuestra belleza única"
+
+✓ Información de Seña clara
+  - Cambió de "Inscripción" a "SEÑA"
+  - Valor: $10.000 (se paga una única vez por mes)
+  - Incluye acceso a 3 clases regulares
+
+✓ Alias de pago
+  - Alias: belen.deanquin
+  - Para transferencias directas
+  - Mostrado claramente en el panel
+
+✓ Reglas de la Casa actualizadas
+  - Cancelación: 24 horas antes
+  - Se recupera en el MISMO MES
+  - Pago hasta el 10
+  - Recargo del 10% después del 10
+
+════════════════════════════════════════════════════════════════
+
+📅 PANEL DE CLASES - NUEVO SISTEMA
+
+✓ DOS SECCIONES:
+  1. "Mis Inscripciones" (superior)
+     - Muestra clases en que está inscripta
+     - Botón "✕ Cancelar Inscripción"
+     - Aviso: "Puedes cancelar hasta 24 horas antes"
+
+  2. "Clases Disponibles" (inferior)
+     - Todas las clases disponibles
+     - Si está inscripta: botón "✓ Inscripta" (deshabilitado)
+     - Si no está: botón "+ Inscribirse"
+
+✓ FUNCIÓN CANCELAR:
+  - Pide confirmación
+  - Mensaje: "¿Deseas cancelar esta clase?"
+  - Aviso: "Puedes recuperarla en el mismo mes"
+  - Elimina la inscripción automáticamente
+  - Actualiza ambas secciones
+
+════════════════════════════════════════════════════════════════
+
+🔧 BACKEND - NUEVOS ENDPOINTS
+
+POST /api/inscripciones
+  → Alumna se inscribe a una clase
+  → Requiere: clase_id
+  → Devuelve: id de inscripción
+
+DELETE /api/inscripciones/:claseId
+  → Alumna cancela una clase
+  → Solo cancela SU inscripción
+  → La clase sigue disponible para otros
+  → Devuelve: mensaje de confirmación
+
+════════════════════════════════════════════════════════════════
+
+🎨 INTERFAZ - CAMBIOS VISUALES
+
+✓ Colores mejorados
+  - Sección "Mis Inscripciones" con fondo verde pastel
+  - Botón de cancelar en rojo (alert)
+  - Botón de inscribirse en color principal
+
+✓ Estructura clara
+  - Primero: Mis clases (verde)
+  - Luego: Clases disponibles
+
+✓ Estado visual
+  - Si está inscripta: botón deshabilitado
+  - Si puede inscribirse: botón activo
+
+════════════════════════════════════════════════════════════════
+
+📋 TEXTO ACTUALIZADO
+
+ANTES: "Inscripción: $10.000"
+AHORA: "Seña: $10.000" (se paga una única vez por mes)
+
+ANTES: No había info de alias
+AHORA: Alias: belen.deanquin (mostrado prominentemente)
+
+ANTES: "La clase se da por perdida"
+AHORA: "Se recupera en el MISMO MES" (agregado a reglas)
+
+════════════════════════════════════════════════════════════════
+
+✨ FRASE MOTIVACIONAL
+
+Nueva frase en el dashboard:
+"La cerámica nos enseña que todas nuestras imperfecciones
+ son parte de nuestra belleza única"
+
+Con mensaje adicional:
+"Cada clase es una oportunidad para crear, aprender y
+ conectar con tu arte interior ✨"
+
+════════════════════════════════════════════════════════════════
+
+🧪 PROBADO
+
+✓ Dashboard muestra frase motivacional
+✓ Info de seña con alias visible
+✓ Panel de clases muestra ambas secciones
+✓ Botón cancelar funciona
+✓ Inscripciones se actualizan correctamente
+✓ Mensajes de confirmación aparecen
+
+════════════════════════════════════════════════════════════════
+
+🚀 CÓMO VER LOS CAMBIOS
+
+1. Recarga el navegador (F5)
+2. Ingresa como alumna
+3. Ve a "🏠 Inicio" - verás la frase y el alias
+4. Ve a "📅 Clases" - verás el nuevo sistema
+
+════════════════════════════════════════════════════════════════
+
+Hecho con 💜 para Be·Lu Cerámica Studio

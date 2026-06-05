@@ -1,0 +1,129 @@
+═══════════════════════════════════════════════════════════════
+  BE·LU CERÁMICA STUDIO - APP DE GESTIÓN
+  ✓ Tu aplicación está lista para usar
+═══════════════════════════════════════════════════════════════
+
+📍 UBICACIÓN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Carpeta: C:\Users\I556043\Desktop\BeluCeramicaApp
+
+🚀 CÓMO INICIAR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Abre la carpeta BeluCeramicaApp
+2. Haz clic en la barra de dirección y escribe: cmd
+3. En la terminal ejecuta: npm start
+4. Abre tu navegador en: http://localhost:5000
+
+💻 CREDENCIALES DE ADMIN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Email: beludeanquin@gmail.com
+Contraseña: admin123
+
+Email: lucrebayj@gmail.com
+Contraseña: admin123
+
+📋 QUÉ PUEDEN HACER LAS ALUMNAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Registrarse en la app
+✓ Ver clases disponibles
+✓ Inscribirse a clases (máx 10 por turno)
+✓ Ver sus pagos y estado
+✓ Consultar reglas de la casa
+✓ Ver horarios y precios
+✓ Ver catálogo de piezas bizcocho
+✓ Ver piezas de contramolde
+
+📊 QUÉ PUEDEN HACER LAS ADMIN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Dashboard con estadísticas
+✓ Crear y programar clases nuevas
+✓ Ver listado de alumnas registradas
+✓ Registrar pagos
+✓ Administrar piezas bizcocho
+✓ Administrar piezas contramolde
+✓ Marcar asistencias
+
+⏰ HORARIOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Jueves:  18:00 - 20:00
+Viernes: 10:00 - 12:00
+Viernes: 18:00 - 20:00
+
+💰 PRECIOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Taller Regular (mes):  $70.000
+Clase Suelta:          $27.000
+Seña Inscripción:      $10.000
+
+📏 REGLAS CONFIGURADAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Cancelación: 24 horas antes (se puede reprogramar)
+✓ Sin cancelación: clase perdida
+✓ Pagos: hasta el 10 de cada mes
+✓ Después del 10: recargo del 10%
+✓ Capacidad: 10 alumnas por turno
+✓ 3 clases mensuales en taller regular
+
+📁 ARCHIVOS DEL PROYECTO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+server.js                      → Backend (Express + SQLite)
+public/index.html              → Frontend (React)
+belu_ceramica.db              → Base de datos
+init-db.js                    → Script para cargar datos
+BeluCeramica_Documentacion.docx → Documentación en Word
+GUIA_INICIO.md                → Guía completa de uso
+README.md                     → Documentación técnica
+
+🎨 DISEÑO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Los colores pastel están extraídos de tu logo:
+• Rosa pastel (#F5D5D0)
+• Terracota suave (#D4A5A0)
+• Tonos tierra claros
+
+La app es totalmente responsive (funciona en celular, tablet y desktop)
+
+⚙️ TECNOLOGÍA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Backend:  Node.js + Express
+BD:       SQLite3
+Frontend: React 18
+Auth:     JWT + bcryptjs
+
+🐛 POSIBLES MEJORAS FUTURAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+□ Notificaciones por email
+□ Integración WhatsApp
+□ Galería de imágenes para piezas
+□ Reportes en PDF
+□ Sistema de calificaciones
+□ Backup automático
+
+❓ PREGUNTAS FRECUENTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+P: ¿Puedo cambiar la contraseña de admin?
+R: Sí, podemos hacerlo. Avísame en la próxima sesión.
+
+P: ¿Qué pasa si una alumna no paga a tiempo?
+R: La app registra el atraso. Ustedes pueden marcar qué alumnas siguen.
+
+P: ¿Puedo agregar más clases durante el mes?
+R: Sí, desde el panel de admin puedes crear nuevas clases en cualquier momento.
+
+P: ¿Se ve bien en el celular?
+R: Sí, la app es completamente responsive.
+
+P: ¿Dónde están las piezas iniciales?
+R: Ya hay ejemplos cargados en la base de datos. Puedes agregar más.
+
+📞 SOPORTE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Si necesitas cambios, mejoras, ajustes o tienes preguntas,
+avísame en nuestras próximas sesiones.
+
+La app es completamente personalizable según tus necesidades.
+
+═══════════════════════════════════════════════════════════════
+Hecho con 💜 para Be·Lu Cerámica Studio
+═══════════════════════════════════════════════════════════════

@@ -1,0 +1,143 @@
+═══════════════════════════════════════════════════════════════
+  LÍMITE DE 3 CLASES POR MES - IMPLEMENTADO
+═══════════════════════════════════════════════════════════════
+
+✅ CAMBIO IMPLEMENTADO:
+
+Las alumnas SOLO pueden inscribirse a MÁXIMO 3 clases por mes.
+
+════════════════════════════════════════════════════════════════
+
+🔧 CÓMO FUNCIONA:
+
+1. BACKEND (server.js):
+   ✓ Verifica cuántas clases tiene inscrita la alumna
+   ✓ Si ya tiene 3, RECHAZA la inscripción
+   ✓ Error: "Solo puedes inscribirte a máximo 3 clases por mes"
+
+2. FRONTEND (index.html):
+   ✓ Muestra contador: "Mis Inscripciones (2/3)"
+   ✓ Aviso amarillo cuando llega a 3 clases
+   ✓ Botones de inscripción se deshabilitan
+   ✓ Botones muestran "⊘ Límite alcanzado"
+
+════════════════════════════════════════════════════════════════
+
+📱 QUÉ VE LA ALUMNA:
+
+CASO 1 - Tiene menos de 3 clases:
+  ✓ Botón "+ Inscribirse" activo y funcional
+  ✓ Puede hacer clic e inscribirse
+  ✓ Contador: "Mis Inscripciones (1/3)" o "(2/3)"
+
+CASO 2 - Llega a 3 clases:
+  ⚠️ Aviso amarillo aparece:
+     "Ya tienes 3 clases inscriptas (el máximo del mes).
+      Para inscribirte a otra, debes cancelar una."
+
+  ✓ Contador: "Mis Inscripciones (3/3)"
+
+  ✓ Botones de clases disponibles:
+     - Si ya está inscripta: "✓ Inscripta"
+     - Si no está inscripta: "⊘ Límite alcanzado"
+
+  ✓ Botones deshabilitados (gris oscuro)
+  ✓ No puede hacer clic
+
+CASO 3 - Cancela una clase:
+  ✓ Vuelve a tener espacio disponible
+  ✓ Aviso amarillo desaparece
+  ✓ Botones "+ Inscribirse" vuelven a estar activos
+  ✓ Contador actualiza (ej: 2/3)
+
+════════════════════════════════════════════════════════════════
+
+🎨 INTERFAZ:
+
+CONTADOR:
+  Antes: "Mis Inscripciones (3)"
+  Ahora: "Mis Inscripciones (3/3)"
+
+AVISO LÍMITE:
+  Color: Amarillo (#E8D4A8)
+  Ícono: ⚠️
+  Texto claro explicando qué hacer
+
+BOTONES DESHABILITADOS:
+  Color: Rojo oscuro (#D4A0A0)
+  Texto: "⊘ Límite alcanzado"
+  Tooltip: "Ya tienes 3 clases. Cancela una para inscribirte a otra."
+  Cursor: default (no se puede hacer clic)
+
+════════════════════════════════════════════════════════════════
+
+📋 VALIDACIÓN:
+
+BACKEND:
+  1. Alumna intenta inscribirse
+  2. SELECT COUNT(*) FROM inscripciones WHERE user_id = ?
+  3. Si count >= 3: ERROR
+  4. Si count < 3: Permite inscripción
+
+FRONTEND:
+  1. const alcanzoLimite = misClases.length >= 3
+  2. Si alcanzoLimite:
+     - Muestra aviso
+     - Deshabilita botones
+     - Cambia texto a "⊘ Límite alcanzado"
+
+════════════════════════════════════════════════════════════════
+
+✅ FLUJO COMPLETO:
+
+Alumna ve "Clases Disponibles"
+  ↓
+Hace clic en "+ Inscribirse" (si no tiene 3)
+  ↓
+BACKEND valida: count < 3 ✓
+  ↓
+Se inscribe exitosamente
+  ↓
+FRONTEND actualiza:
+  - Contador aumenta
+  - Si ahora tiene 3:
+    * Aparece aviso amarillo
+    * Botones se deshabilitan
+  ↓
+Alumna decide cancelar una clase
+  ↓
+Hace clic en "✕ Cancelar Inscripción"
+  ↓
+FRONTEND actualiza:
+  - Contador disminuye
+  - Aviso desaparece
+  - Botones se habilitan
+
+════════════════════════════════════════════════════════════════
+
+🧪 PROBADO:
+
+✓ Inscripción permitida con 0, 1, 2 clases
+✓ Inscripción rechazada con 3 clases
+✓ Mensajes de error claros
+✓ UI deshabilitada cuando límite alcanzado
+✓ Contador muestra X/3
+✓ Aviso amarillo aparece/desaparece correctamente
+
+════════════════════════════════════════════════════════════════
+
+🚀 PARA PROBAR:
+
+1. Recarga navegador (F5)
+2. Crea una alumna o ingresa con una existente
+3. Ve a "📅 Clases"
+4. Inscríbete a 3 clases
+5. Verás el aviso amarillo
+6. Los botones se deshabilitan
+7. Intenta una 4ta clase (no dejará)
+8. Cancela una clase
+9. Verás que se habilita de nuevo
+
+════════════════════════════════════════════════════════════════
+
+Hecho con 💜 para Be·Lu Cerámica Studio

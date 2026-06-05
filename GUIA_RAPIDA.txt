@@ -1,0 +1,126 @@
+🎨 GUÍA RÁPIDA - BE·LU CERÁMICA STUDIO
+
+════════════════════════════════════════════════════════════════
+
+⚡ INICIAR LA APP EN 4 PASOS
+
+1️⃣ Abre la carpeta:
+   C:\Users\I556043\Desktop\BeluCeramicaApp
+
+2️⃣ Haz clic en la barra de dirección y escribe: cmd
+   [Presiona Enter]
+
+3️⃣ En la ventana que se abre, escribe:
+   npm start
+
+4️⃣ Abre tu navegador y ve a:
+   http://localhost:5000
+
+════════════════════════════════════════════════════════════════
+
+👤 ACCEDER COMO ADMINISTRADORA
+
+En la pantalla de login:
+  Email: beludeanquin@gmail.com (o lucrebayj@gmail.com)
+  Contraseña: admin123
+
+Dentro verás 4 opciones:
+  📊 Admin     → Ver estadísticas
+  📅 Clases    → Crear y ver clases
+  👥 Alumnas   → Gestionar alumnas
+  🎨 Piezas    → Agregar piezas
+
+════════════════════════════════════════════════════════════════
+
+👨‍🎓 ACCEDER COMO ALUMNA
+
+1. Haz clic en "Registrarse"
+2. Completa: Nombre, Apellido, Email, Contraseña
+3. ¡Listo! Ya puedes:
+   - Ver clases disponibles
+   - Inscribirte a clases
+   - Consultar tus pagos
+   - Ver información del taller
+
+════════════════════════════════════════════════════════════════
+
+📋 FUNCIONES PRINCIPALES
+
+COMO ADMIN:
+
+Crear una clase:
+  1. Clic en "Clases"
+  2. Rellena: Fecha, Día, Horario
+  3. Clic en "Agregar Clase"
+
+Ver alumnas registradas:
+  1. Clic en "Alumnas"
+  2. Se muestra listado completo
+
+Agregar piezas:
+  1. Clic en "Piezas"
+  2. Completa modelo, descripción, valor
+  3. Clic en "Agregar"
+
+COMO ALUMNA:
+
+Inscribirse a una clase:
+  1. Clic en "Clases"
+  2. Busca la clase que deseas
+  3. Clic en "Inscribirse"
+
+Ver mis pagos:
+  1. Clic en "Pagos"
+  2. Se muestra historial
+
+Consultar piezas:
+  1. En el inicio aparecen piezas disponibles
+  2. Puedes ver precios y modelos
+
+════════════════════════════════════════════════════════════════
+
+📞 SI NO FUNCIONA
+
+El servidor no arranca:
+  → Verifica que npm esté instalado: npm -v
+  → Cierra la terminal y vuelve a ejecutar npm start
+
+No puedo acceder a http://localhost:5000:
+  → Espera 2-3 segundos después de ejecutar npm start
+  → Verifica que dice "Server running on port 5000"
+
+Olvidad la contraseña:
+  → Avísame, puedo resetearla
+
+════════════════════════════════════════════════════════════════
+
+💡 TIPS ÚTILES
+
+• Los datos se guardan automáticamente
+• La app funciona sin internet
+• Puedes abrir varias pestañas sin problemas
+• Haz clic en "Salir" para cerrar sesión
+• Los horarios pueden modificarse desde admin
+• Cada alumna debe registrarse con su propio email
+
+════════════════════════════════════════════════════════════════
+
+📊 DATOS PRECARGADOS
+
+Clases de Junio 2026:
+  ✓ 4 de junio (jueves)
+  ✓ 5 de junio (viernes 2 horarios)
+  ✓ 18 de junio (jueves)
+  ✓ 19 de junio (viernes 2 horarios)
+  ✓ 25 de junio (jueves)
+
+Piezas Ejemplo:
+  ✓ Tazas, platos, macetas, cuencos
+  ✓ Piezas de contramolde en diferentes modelos
+  (Puedes agregar más desde admin)
+
+════════════════════════════════════════════════════════════════
+
+¿Necesitas ayuda? Avísame en la próxima sesión.
+
+Hecho con 💜 para Be·Lu Cerámica Studio

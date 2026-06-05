@@ -1,0 +1,81 @@
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║           ✅ TU APP ESTÁ LISTA PARA COMPARTIR                  ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
+
+🚀 PASOS RÁPIDOS:
+
+1️⃣ EJECUTA: COMPARTIR_LINK.bat
+   (Doble clic en el archivo)
+
+2️⃣ VERÁS DOS LINKS:
+   • LOCAL: http://localhost:5000 (solo tu compu)
+   • RED: http://192.168.0.9:5000 (para todos)
+
+3️⃣ COMPARTE EL LINK DE RED:
+   ✓ Por WhatsApp
+   ✓ Por Email
+   ✓ Impreso en papel
+   ✓ En un QR (puedes generar uno en qr-code-generator.com)
+
+4️⃣ TU ADMINISTRADORA Y ALUMNAS INGRESAN:
+   • Abren el link en su navegador
+   • Ingresan con usuario y contraseña
+   • ¡Listo!
+
+════════════════════════════════════════════════════════════════
+
+⚠️ IMPORTANTE:
+
+✓ Tu computadora debe estar ENCENDIDA
+✓ Todos deben estar en la MISMA WiFi
+✓ El link solo funciona mientras el servidor está corriendo
+
+════════════════════════════════════════════════════════════════
+
+📝 PLANTILLA DE MENSAJE PARA COMPARTIR:
+
+════════════════════════════════════════════════════════════════
+
+"Hola!
+
+Aquí está el link de la app de Be·Lu Cerámica Studio:
+
+🌐 http://192.168.0.9:5000
+
+Para ingresar:
+✓ Abre este link en tu navegador (Chrome, Safari, Firefox)
+✓ Ingresa con tu usuario y contraseña
+✓ ¡Listo! Ya puedes ver tus clases, hacer seguimiento de pagos
+  y más.
+
+Si no funciona:
+- Verifica estar en la misma WiFi que el server
+- Si estás en celular, asegúrate de estar en WiFi (no datos)
+- Intenta recargar la página (F5)
+
+¿Preguntas? Preguntame"
+
+════════════════════════════════════════════════════════════════
+
+💡 TIPS DE SEGURIDAD:
+
+✓ El link SOLO funciona en tu red local
+✓ Nadie desde Internet puede acceder
+✓ Todos necesitan usuario y contraseña
+✓ Es seguro compartir
+
+════════════════════════════════════════════════════════════════
+
+🎯 RESUMIENDO:
+
+Tu app está lista para que:
+✓ Tu administradora (Lucrecia) la use desde su celular
+✓ Las alumnas vean sus clases desde sus dispositivos
+✓ Todo en la misma red WiFi
+✓ Sin necesidad de internet externo
+
+Solo ejecuta COMPARTIR_LINK.bat y comparte el link! 💜
+
+════════════════════════════════════════════════════════════════

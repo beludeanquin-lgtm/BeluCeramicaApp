@@ -1,0 +1,134 @@
+═══════════════════════════════════════════════════════════════
+  DESPLEGAR TU APP EN INTERNET - GUÍA COMPLETA
+═══════════════════════════════════════════════════════════════
+
+✅ ¡TU APP ESTÁ LISTA PARA INTERNET!
+
+He preparado todo para que la subas a Railway (GRATUITO).
+
+════════════════════════════════════════════════════════════════
+
+🚀 PASOS RÁPIDOS (5 minutos):
+
+1️⃣ CREAR CUENTA EN RAILWAY:
+   - Ve a: https://railway.app
+   - Click en "Sign Up" (arriba derecha)
+   - Crea cuenta con email o GitHub
+
+2️⃣ CONECTAR TU REPOSITORIO:
+   - La primera vez te pide conectar GitHub
+   - Autoriza Railway a acceder a tus repos
+
+   (Si no tienes GitHub, crea uno gratis en github.com)
+
+3️⃣ CREAR UN NUEVO PROYECTO:
+   - En Railway, click en "New Project"
+   - Selecciona "GitHub Repo"
+   - Busca "BeluCeramicaApp"
+   - Selecciona y conecta
+
+4️⃣ RAILWAY DESPLIEGA AUTOMÁTICAMENTE:
+   - Espera a que termine (2-3 minutos)
+   - Te dará un link como: https://beluceramic-production.up.railway.app
+
+5️⃣ ¡LISTO! COMPARTE EL LINK:
+   - Ese link funciona para Lucrecia y las alumnas
+   - No necesita estar encendida tu compu
+
+════════════════════════════════════════════════════════════════
+
+📋 SI NO TIENES GITHUB (MÁS FÁCIL):
+
+1. Ve a: https://railway.app
+2. Click en "Sign Up"
+3. Selecciona "Continue with Email"
+4. Crea cuenta
+5. Autoriza a Railway
+6. Conecta este repositorio
+
+(Railway puede leer directamente tu carpeta)
+
+════════════════════════════════════════════════════════════════
+
+🌐 TU LINK PERMANENTE:
+
+Una vez desplegado, tendrás un link como:
+
+https://beluceramic-production.up.railway.app
+
+Este link:
+✓ Funciona 24/7 (tu compu puede estar apagada)
+✓ No expira nunca
+✓ Puedes compartirlo con Lucrecia y las alumnas
+✓ Es GRATUITO (Railway ofrece 500 horas/mes)
+
+════════════════════════════════════════════════════════════════
+
+💾 ANTES DE DESPLEGAR - CHECKLIST:
+
+✓ Git está inicializado en tu carpeta
+✓ Archivo Procfile creado
+✓ Package.json está actualizado
+✓ Server.js usa PORT dinámico
+
+(Yo ya hice todo esto)
+
+════════════════════════════════════════════════════════════════
+
+🔧 SI NECESITAS HACER CAMBIOS DESPUÉS:
+
+1. Haz cambios en tu carpeta local
+2. Guarda los cambios en Git:
+   git add .
+   git commit -m "Cambios"
+   git push
+
+3. Railway automáticamente redeploya tu app
+4. En 1-2 minutos está actualizada
+
+════════════════════════════════════════════════════════════════
+
+❓ PREGUNTAS:
+
+P: ¿Cuesta dinero?
+R: NO. Railway es gratis para proyectos pequeños como este.
+
+P: ¿Se puede caer?
+R: Muy raro. Railway es confiable (la usan empresas grandes).
+
+P: ¿Puedo cambiar el link?
+R: El link es automático, pero puedes agregar un dominio
+   personalizado si quieres (costo extra, opcional).
+
+P: ¿Se perderán los datos?
+R: Los datos se guardan en la base de datos (SQLite).
+   Se sincronizarán automáticamente.
+
+P: ¿Qué pasa si mi compu se apaga?
+R: No importa, el servidor está en Internet, no en tu compu.
+
+════════════════════════════════════════════════════════════════
+
+📞 SOPORTE:
+
+Si necesitas ayuda con Railway:
+- Documentación: docs.railway.app
+- Chat de soporte (en el sitio)
+
+Si necesitas cambios en la app:
+- Avísame y lo hacemos
+
+════════════════════════════════════════════════════════════════
+
+🎯 PRÓXIMOS PASOS:
+
+1. Crea cuenta en Railway
+2. Conecta tu GitHub
+3. Despliega BeluCeramicaApp
+4. Comparte el link con Lucrecia y alumnas
+5. ¡Listo!
+
+════════════════════════════════════════════════════════════════
+
+¡Tu app estará en Internet en 5 minutos! 💜
+

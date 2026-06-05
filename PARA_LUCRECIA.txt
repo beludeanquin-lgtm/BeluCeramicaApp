@@ -1,0 +1,123 @@
+Hola Lucrecia! 💜
+
+Te escribo para que sepas cómo usar la app que acabo de crear para Be·Lu Cerámica Studio.
+
+════════════════════════════════════════════════════════════════
+
+🚀 CÓMO INICIAR (Lo más importante)
+
+1. Haz clic derecho en la carpeta "BeluCeramicaApp" en el Desktop
+2. Haz clic en "Abrir en Terminal"
+3. Escribe esto y presiona Enter:
+   npm start
+
+4. Abre tu navegador (Chrome, Firefox, Edge) y ve a:
+   http://localhost:5000
+
+¡Listo! Ya está funcionando.
+
+════════════════════════════════════════════════════════════════
+
+👤 CÓMO ENTRAR COMO ADMIN
+
+En la pantalla inicial de la app:
+  Email: lucrebayj@gmail.com
+  Contraseña: admin123
+
+Verás 4 botones:
+  📊 Admin    → Ver cuántas alumnas hay, clases, pagos pendientes
+  📅 Clases   → Crear nuevas clases
+  👥 Alumnas  → Ver lista de alumnas registradas
+  🎨 Piezas   → Agregar o editar piezas
+
+════════════════════════════════════════════════════════════════
+
+📅 CREAR UNA NUEVA CLASE
+
+1. Haz clic en el botón "📅 Clases"
+2. Verás un formulario para agregar clase
+3. Completa:
+   - Fecha (ej: 2026-07-04)
+   - Día (Jueves o Viernes)
+   - Horario (18:00 - 20:00 o 10:00 - 12:00)
+4. Haz clic en "Agregar Clase"
+5. La clase aparece abajo en el listado
+
+════════════════════════════════════════════════════════════════
+
+👥 VER ALUMNAS REGISTRADAS
+
+1. Haz clic en "👥 Alumnas"
+2. Se muestra una tabla con todas las alumnas que se registraron
+3. Verás: Nombre, Email, Fecha de inscripción
+
+════════════════════════════════════════════════════════════════
+
+🎨 AGREGAR PIEZAS
+
+Piezas Bizcocho (las que se cocinan):
+1. Clic en "🎨 Piezas"
+2. Rellena: Modelo, Descripción, Valor, Cantidad
+3. Clic en "Agregar"
+4. Aparece en el catálogo de alumnas
+
+Piezas Contramolde (moldes para vender):
+1. Lo mismo pero en otra sección
+2. Solo necesita: Modelo, Valor
+
+════════════════════════════════════════════════════════════════
+
+💰 REGISTRAR PAGOS
+
+(Esta función está lista en el backend pero el frontend
+ aún está en desarrollo - te aviso cuando esté completa)
+
+════════════════════════════════════════════════════════════════
+
+📱 EN EL CELULAR
+
+La app funciona perfecto en celular también!
+Solo abre http://localhost:5000 en cualquier dispositivo
+que esté conectado a la misma red.
+
+════════════════════════════════════════════════════════════════
+
+⚙️ SI ALGO NO FUNCIONA
+
+El servidor no arranca:
+→ Verifica que tengas Node.js instalado
+→ Abre PowerShell o CMD como administrador
+→ Intenta de nuevo
+
+Olvidé la contraseña:
+→ Las contraseñas están guardadas en la base de datos
+→ Avísame y las reseteo
+
+La app va lenta:
+→ Es completamente normal la primera vez
+→ Después carga muy rápido
+
+════════════════════════════════════════════════════════════════
+
+💡 TIPS
+
+• Los datos se guardan automáticamente
+• Puedes abrir varias ventanas de la app sin problemas
+• Haz clic en "Salir" para cerrar tu sesión
+• Las alumnas se registran solas desde sus dispositivos
+• Tú solo necesitas crear las clases y ver el listado
+
+════════════════════════════════════════════════════════════════
+
+📞 CUALQUIER DUDA
+
+Si no entiendes algo o algo no funciona, avísale a Belu.
+
+Ella sabe exactamente cómo está hecha la app y puede arreglar
+lo que sea en segundos.
+
+════════════════════════════════════════════════════════════════
+
+¡A usar la app! 💜
+
+Hecho para Be·Lu Cerámica Studio

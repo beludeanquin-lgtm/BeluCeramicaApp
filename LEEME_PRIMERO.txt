@@ -1,0 +1,83 @@
+BE·LU CERÁMICA STUDIO - APP ACTUALIZADA
+════════════════════════════════════════════════════════════════
+
+✅ CAMBIO PRINCIPAL: Ya registras tú a las alumnas
+
+════════════════════════════════════════════════════════════════
+
+📋 PASOS PARA USAR:
+
+1. Haz doble clic en START.bat
+   (O abre terminal y escribe: npm start)
+
+2. Abre navegador en: http://localhost:5000
+
+3. Ingresa con tu email:
+   beludeanquin@gmail.com / admin123
+   (o lucrebayj@gmail.com / admin123)
+
+4. Verás 4 botones:
+   📊 Admin - Ver estadísticas
+   📅 Clases - Crear clases
+   👥 Alumnas - REGISTRAR ALUMNAS ← NUEVO!
+   🎨 Piezas - Agregar piezas ← MEJORADO!
+
+════════════════════════════════════════════════════════════════
+
+👥 REGISTRAR ALUMNAS:
+
+Clic en "Alumnas" → "+ Registrar Nueva Alumna"
+
+Rellena:
+  • Nombre
+  • Apellido
+  • Email
+  • Contraseña (la que tú quieras)
+
+Clic en "Registrar Alumna" ✓
+
+La alumna ya puede entrar con eso.
+
+════════════════════════════════════════════════════════════════
+
+🗑️ DAR DE BAJA:
+
+Clic en "Alumnas" → Busca alumna en tabla
+
+Clic en "Dar de Baja" → Confirma
+
+Se elimina: alumna, inscripciones, pagos
+
+════════════════════════════════════════════════════════════════
+
+🎨 AGREGAR PIEZAS:
+
+Clic en "Piezas" → Ves 2 formularios
+
+PIEZAS BIZCOCHO:
+  • Modelo (Ej: Taza Base)
+  • Descripción (Ej: Taza clásica)
+  • Valor (5000)
+  • Cantidad (10)
+
+PIEZAS CONTRAMOLDE:
+  • Modelo (Ej: Forma de Hoja)
+  • Valor (12000)
+
+Los catálogos se ven abajo en tablas.
+
+════════════════════════════════════════════════════════════════
+
+❓ SI ALGO NO FUNCIONA:
+
+• Cierra el navegador, cierra START.bat
+• Haz doble clic en START.bat de nuevo
+• Abre http://localhost:5000
+
+Si persiste: avísame
+
+════════════════════════════════════════════════════════════════
+
+¡Listo! Tu app está lista. 💜
+
+Preguntas: contactame

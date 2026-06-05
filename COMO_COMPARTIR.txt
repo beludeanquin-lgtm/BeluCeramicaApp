@@ -1,0 +1,117 @@
+═══════════════════════════════════════════════════════════════
+  CÓMO COMPARTIR LA APP CON TU ADMINISTRADORA Y ALUMNAS
+═══════════════════════════════════════════════════════════════
+
+🎯 OPCIÓN 1: COMPARTIR EN LA MISMA RED (MÁS FÁCIL)
+
+════════════════════════════════════════════════════════════════
+
+PASO 1: Abre "COMPARTIR_LINK.bat"
+  (Lo acabo de crear en la carpeta BeluCeramicaApp)
+
+PASO 2: El archivo mostrará dos links:
+
+  🖥️  LOCAL: http://localhost:5000
+      (Solo funciona en tu computadora)
+
+  📱 RED: http://192.168.0.9:5000
+      (Funciona en cualquier dispositivo conectado a tu WiFi)
+
+PASO 3: Comparte el LINK DE RED con:
+  ✓ Tu administradora (Lucrecia)
+  ✓ Las alumnas
+
+  Ejemplo: "Ingresa a http://192.168.0.9:5000 desde tu celular"
+
+PASO 4: Ellas ingresan desde:
+  ✓ Celular (WiFi)
+  ✓ Tablet (WiFi)
+  ✓ Otra computadora (misma red)
+
+════════════════════════════════════════════════════════════════
+
+⚠️ IMPORTANTE:
+
+✓ TU COMPUTADORA DEBE ESTAR ENCENDIDA
+  La app solo funciona mientras el servidor está corriendo
+
+✓ TODOS EN LA MISMA RED
+  Celular en la misma WiFi que tu computadora
+  O todos conectados a la misma red de internet
+
+✓ COPIAR EL LINK EXACTAMENTE
+  Si la IP es 192.168.0.9, envía: http://192.168.0.9:5000
+  (sin espacios, sin cambiar nada)
+
+════════════════════════════════════════════════════════════════
+
+📋 INSTRUCCIONES PARA TUS ALUMNAS:
+
+════════════════════════════════════════════════════════════════
+
+1. ABRE EL LINK EN TU NAVEGADOR:
+   (Chrome, Safari, Firefox, Edge, etc.)
+
+   Copia y pega este link:
+   http://192.168.0.9:5000
+
+2. VERÁS LA PANTALLA DE LOGIN:
+
+   Si eres ADMINISTRADORA:
+   Email: beludeanquin@gmail.com o lucrebayj@gmail.com
+   Contraseña: (la que tengas)
+
+   Si eres ALUMNA:
+   Email: (el que te dieron)
+   Contraseña: (la que te dieron)
+
+3. ¡LISTO! YA PUEDES USAR LA APP
+
+════════════════════════════════════════════════════════════════
+
+📱 DESDE CELULAR O TABLET:
+
+1. Abre tu navegador (Chrome, Safari, etc.)
+2. Copia y pega el link que te compartieron
+3. Espera a que cargue
+4. Ingresa con tu usuario y contraseña
+5. ¡Listo!
+
+════════════════════════════════════════════════════════════════
+
+🎯 OPCIÓN 2: LINK PERMANENTE (MÁS ADELANTE)
+
+Si quieres que la app esté accesible TODO EL TIEMPO
+(incluso cuando tu computadora está apagada), tenemos
+opciones como:
+
+✓ Subir la app a un hosting en la nube
+✓ Usar un dominio propio
+✓ Usar un servicio como Heroku, Vercel, etc.
+
+(Avísame si quieres hacer esto más adelante)
+
+════════════════════════════════════════════════════════════════
+
+✅ RESUMEN RÁPIDO:
+
+1. Ejecuta: COMPARTIR_LINK.bat
+2. Obtén tu IP (ej: 192.168.0.9)
+3. Comparte: http://[tu-ip]:5000
+4. Listo para usar desde cualquier dispositivo
+
+════════════════════════════════════════════════════════════════
+
+¿PROBLEMAS?
+
+Si alguien no puede acceder:
+
+1. Verifica que tu computadora esté encendida
+2. Verifica que todos estén en la MISMA WiFi
+3. Intenta con http://localhost:5000 en tu computadora
+4. Si funciona en tu compu pero no en celular = problema de red
+
+════════════════════════════════════════════════════════════════
+
+¡Listo para compartir! 💜
+
