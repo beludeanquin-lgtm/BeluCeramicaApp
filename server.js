@@ -15,6 +15,12 @@ console.log(`📝 JWT_SECRET configurado: ${JWT_SECRET ? 'SI' : 'NO'}`);
 
 app.use(cors());
 app.use(express.json());
+app.use((req, res, next) => {
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+  res.setHeader('Pragma', 'no-cache');
+  res.setHeader('Expires', '0');
+  next();
+});
 app.use(express.static('public'));
 
 // Inicializar base de datos
