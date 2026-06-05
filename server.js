@@ -5,6 +5,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
+// Reinicio de servidor - 2026-06-05
 const app = express();
 const PORT = process.env.PORT || process.env.RAILWAY_PORT || 5000;
 const JWT_SECRET = process.env.JWT_SECRET || 'tu-clave-secreta-cambiar-en-prod';
