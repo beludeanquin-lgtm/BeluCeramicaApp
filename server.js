@@ -21,7 +21,12 @@ app.use((req, res, next) => {
   res.setHeader('Expires', '0');
   next();
 });
-app.use(express.static('public'));
+// Servir archivos estáticos sin caché
+app.use(express.static('public', {
+  etag: false,
+  lastModified: false,
+  maxAge: 0
+}));
 
 // Inicializar base de datos
 const db = new sqlite3.Database('./belu_ceramica.db', (err) => {
