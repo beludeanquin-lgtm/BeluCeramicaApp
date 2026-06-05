@@ -8,7 +8,10 @@ require('dotenv').config();
 // Reinicio de servidor - 2026-06-05
 const app = express();
 const PORT = process.env.PORT || process.env.RAILWAY_PORT || 5000;
-const JWT_SECRET = process.env.JWT_SECRET || 'tu-clave-secreta-cambiar-en-prod';
+const JWT_SECRET = process.env.JWT_SECRET || 'belu-ceramica-studio-secret-key-2026';
+
+console.log(`🚀 Servidor iniciando en puerto ${PORT}`);
+console.log(`📝 JWT_SECRET configurado: ${JWT_SECRET ? 'SI' : 'NO'}`);
 
 app.use(cors());
 app.use(express.json());
@@ -157,6 +160,11 @@ const verificarAdmin = (req, res, next) => {
   }
   next();
 };
+
+// HEALTH CHECK
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok', message: 'Servidor funcionando correctamente' });
+});
 
 // AUTENTICACIÓN - Solo para admins
 app.post('/api/auth/register', (req, res) => {
